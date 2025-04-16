@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body class="cls-1">
+  
+  <div class="cls-2">
+    <img src="assets/Facebook.png" style="height: 70px;  border-radius: 50%;"  alt="Facebook logo" class="logo" />
+    <h2 class="title">Register</h2>
+    <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+      <input
+         type="text"
+         class="ud"
+         placeholder="UserName"
+         name="name"
+         required
+         [(ngModel)]="user.username"
+      /><br>
+      <input
+        type="text"
+        class="ud"
+        placeholder="email"
+        name="username"
+        required
+        [(ngModel)]="user.email"
+      /><br>
+  
+      <input
+        type="password"
+        class="ud"
+        placeholder="Password"
+        name="password"
+        required
+        [(ngModel)]="user.password"
+      /><br>
+  
+      <input
+        type="password"
+        class="ud"
+        placeholder="Confirm password"
+        name="confirmPassword"
+        required
+        [(ngModel)]="user.confirmPassword"
+      /><br>
+  
+      <button type="submit" class="btn">Register</button>
+    </form>
+  
+    <p class="cls-3">
+      Already have an account?
+      <a routerLink="/login" class="cls-3">login</a>
+    </p>
+  </div>
+  
+
+
+</body>
+</html>
