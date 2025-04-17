@@ -32,8 +32,8 @@
         formControlName="email"
       /><br>
       <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
-        <small><em class="error">Email is required.</em></small>
-        </div>
+        <small class="error">Email is required.</small>
+      </div>
 
 
       <!-- password -->
@@ -43,13 +43,18 @@
         placeholder="Password"
         formControlName="password"
       /><br>
+      <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched">
+        <small class="error">Password is required.</small>
+      </div>
       <input
         type="password"
         class="ud"
         placeholder="Confirm Password"
         formControlName="confirmPassword"
       /><br>
-  
+      <div *ngIf="registerForm.get('confirmPassword')?.invalid && registerForm.get('confirmPassword')?.touched">
+        <small class="error">Confirm Password is required.</small>
+      </div>
       <button type="submit" class="btn" >Register</button>
     </form>
 
