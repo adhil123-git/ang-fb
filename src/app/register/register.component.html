@@ -3,59 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Register</title>
 </head>
 <body class="cls-1">
-  
   <div class="cls-2">
-    <img src="assets/Facebook.png" style="height: 70px;  border-radius: 50%;"  alt="Facebook logo" class="logo" />
+    <img src="assets/Facebook.png" style="height: 50px; border-radius: 50%;margin-top: 20px;" alt="Facebook logo" class="logo" />
     <h2 class="title">Register</h2>
-    <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
-      <input
-         type="text"
-         class="ud"
-         placeholder="UserName"
-         name="name"
-         required
-         [(ngModel)]="user.username"
-      /><br>
+    <!-- form  start -->
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+      <!-- user -->
       <input
         type="text"
         class="ud"
-        placeholder="email"
-        name="username"
-        required
-        [(ngModel)]="user.email"
+        placeholder="UserName"
+        formControlName="username"
       /><br>
-  
+     <div *ngIf="registerForm.get('username')?.invalid && registerForm.get('username')?.touched" >
+        <small class="error">Username is required.</small>
+     </div>
+
+
+      <!-- email -->
+      <input
+        type="email"
+        class="ud"
+        placeholder="Email"
+        formControlName="email"
+      /><br>
+      <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+        <small><em class="error">Email is required.</em></small>
+        </div>
+
+
+      <!-- password -->
       <input
         type="password"
         class="ud"
         placeholder="Password"
-        name="password"
-        required
-        [(ngModel)]="user.password"
+        formControlName="password"
       /><br>
-  
       <input
         type="password"
         class="ud"
-        placeholder="Confirm password"
-        name="confirmPassword"
-        required
-        [(ngModel)]="user.confirmPassword"
+        placeholder="Confirm Password"
+        formControlName="confirmPassword"
       /><br>
   
-      <button type="submit" class="btn">Register</button>
+      <button type="submit" class="btn" >Register</button>
     </form>
-  
+
     <p class="cls-3">
       Already have an account?
-      <a routerLink="/login" class="cls-3">login</a>
+      <a routerLink="/login" class="cls-3">Login</a>
     </p>
   </div>
-  
-
-
 </body>
 </html>
