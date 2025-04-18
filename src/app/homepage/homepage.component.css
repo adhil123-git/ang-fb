@@ -10,7 +10,6 @@ body {
   background-color: #1266b6; 
   color: white;
   display: flex;
-
   justify-content: space-between;
   padding: 10px 20px;
   position: fixed;
@@ -45,4 +44,14 @@ margin-right: 40px;
 
 .btn:hover {
 background-color: green;
+}
+
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+  text-align: center;
+  margin-top: 100px; 
 }

@@ -1,0 +1,74 @@
+
+
+/* Container for creating a post */
+.create-post {
+    margin-top: 100px;
+    margin-left: 400px;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    width: 400px;
+}
+
+/* Input field for the URL */
+.url-input {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+/* Post button */
+button {
+    padding: 10px 20px;
+    background-color: #1266b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #0a4a8a;
+}
+
+/* Post list container */
+.post-list {
+    margin-top: 20px;
+    margin-left: 420px;
+  
+    width: 400px;
+    box-shadow:0 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* Individual post item */
+.post-item {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    
+}
+
+.post-img{
+    border-radius: 10px;
+}
+
+/* Delete button */
+button.delete-btn {
+    background-color: #ff4d4d;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.delete-btn:hover {
+    background-color: #e60000;
+}

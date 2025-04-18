@@ -7,17 +7,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent {
-  
-  
+ 
+  constructor(private router: Router) {}
 
-    constructor(private router: Router) {}
-  
-    logout(){
-      alert('Logged out successfully!');
-      localStorage.removeItem('loggedInUser');
-      this.router.navigate(['/login']);
-    }
-  
+  logout(): void {
+    alert('Logged out successfully!');
+    localStorage.removeItem('loggedInUser'); // Clear logged-in user data from local storage
+    this.router.navigate(['/login']); // Redirect to login page after logout
   }
-  
+}
+
 

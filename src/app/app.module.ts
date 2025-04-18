@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { HomeComponent } from './folder/home/home.component';
+import { FriendlistComponent } from './folder/friendlist/friendlist.component';
+import { MessageComponent } from './folder/message/message.component';
+import { PostsComponent } from './folder/posts/posts.component';
 
 
 
@@ -14,7 +18,11 @@ import { HomepageComponent } from './homepage/homepage.component';
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    HomepageComponent
+    HomepageComponent,
+    HomeComponent,
+    FriendlistComponent,
+    MessageComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,

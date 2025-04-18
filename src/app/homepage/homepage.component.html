@@ -5,38 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   
 </head>
 <body>
-
     <div>
+        <!-- Navbar -->
         <nav class="navbar">
-            <a class="icon-link" routerLink="/home1">
+            <a class="icon-link" routerLink="/homepage/home">
                 <i class="fas fa-home"></i>
                 <span>Home</span>
             </a>
-            <a class="icon-link" routerLink="/friend-list">
+            <a class="icon-link" routerLink="/homepage/friendlist">
                 <i class="fas fa-user-friends"></i>
                 <span>Friend List</span>
             </a>
-            <a class="icon-link" routerLink="/message">
+            <a class="icon-link" routerLink="/homepage/message">
                 <i class="fas fa-envelope"></i>
                 <span>Message</span>
             </a>
-            <a class="icon-link" routerLink="/notification">
-                <i class="fas fa-bell"></i>
-                <span>Notification</span>
-            </a>
-            <a class="icon-link" routerLink="/posts">
+        
+            <a class="icon-link" routerLink="/homepage/posts">
                 <i class="fas fa-file-alt"></i>
                 <span>Posts</span>
             </a>
-           
             <button class="btn" (click)="logout()">Logout</button>
-        </nav>  
-       
+        </nav>
     </div>
- 
-</body>
 
+    <!-- Content Section -->
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+</body>
 </html>
+

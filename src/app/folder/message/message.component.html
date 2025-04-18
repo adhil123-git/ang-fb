@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+   
+</head>
+<body>
+
+    <!-- Friend List -->
+    <div class="friend-list">
+        <div class="friend-item" (click)="selectFriend('Friend 1')">
+            <img src="assets/friend-1.png" alt="Friend 1" class="friend-img">
+            <p class="friend-name">Friend 1</p>
+        </div>
+        <div class="friend-item" (click)="selectFriend('Friend 2')">
+            <img src="assets/friend-2.png" alt="Friend 2" class="friend-img">
+            <p class="friend-name">Friend 2</p>
+        </div>
+        <div class="friend-item" (click)="selectFriend('Friend 3')">
+            <img src="assets/friend-3.png" alt="Friend 3" class="friend-img">
+            <p class="friend-name">Friend 3</p>
+        </div>
+    </div>
+
+    <!-- Chat Section -->
+    <div *ngIf="selectedFriend" class="chat-container">
+        <h3>Chat with {{ selectedFriend }}</h3>
+        <div class="chat-messages">
+            <div *ngFor="let message of messages" class="message-sent">
+                <p>{{ message }}</p>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" [(ngModel)]="newMessage" placeholder="Type a message..." class="message-box">
+            <button class="send-btn" (click)="sendMessage()">Send</button>
+        </div>
+    </div>
+</body>
+</html>
