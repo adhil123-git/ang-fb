@@ -13,7 +13,7 @@ export class PostsComponent {
   createPost(): void {
     if (this.imageUrl.trim()) {
       this.posts.push(this.imageUrl); // Add the image URL to the posts array
-      this.imageUrl = ''; // Clear the input field
+      this.imageUrl = ''; 
     } else {
       alert('Please enter a valid image URL.');
     }
@@ -21,6 +21,6 @@ export class PostsComponent {
 
   // Delete a post
   deletePost(index: number): void {
-    this.posts.splice(index, 1); // Remove the post at the specified index
+    this.posts.splice(index, 1); 
   }
 }

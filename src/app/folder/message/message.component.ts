@@ -20,7 +20,7 @@ export class MessageComponent {
   sendMessage(): void {
     if (this.newMessage.trim()) {
       this.messages.push(this.newMessage); // Add the new message to the list
-      this.newMessage = ''; // Clear the input field
+      this.newMessage = ''; 
     }
   }
 }
