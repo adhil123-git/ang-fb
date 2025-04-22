@@ -5,11 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { HomeComponent } from './folder/home/home.component';
-import { FriendlistComponent } from './folder/friendlist/friendlist.component';
-import { MessageComponent } from './folder/message/message.component';
-import { PostsComponent } from './folder/posts/posts.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { TotalStudentComponent } from './dashboard/total-student/total-student.component';
+import { AttendancePercentComponent } from './dashboard/attendance-percent/attendance-percent.component';
+import { OverallScoreComponent } from './dashboard/overall-score/overall-score.component';
 
 
 
@@ -18,11 +17,11 @@ import { PostsComponent } from './folder/posts/posts.component';
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    HomepageComponent,
-    HomeComponent,
-    FriendlistComponent,
-    MessageComponent,
-    PostsComponent
+    DashboardComponent,
+    TotalStudentComponent,
+    AttendancePercentComponent,
+    OverallScoreComponent,
+   
   ],
   imports: [
     BrowserModule,

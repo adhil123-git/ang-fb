@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register</title>
-</head>
-<body class="cls-1">
+
+<div class="cls-1">
   <div class="cls-2">
-    <img src="assets/Facebook.png" style="height: 50px; border-radius: 50%;margin-top: 20px;" alt="Facebook logo" class="logo" />
+    <img src="assets/teacher.png" style="height: 70px; border-radius: 5%;margin-top: 20px;" alt="teacher logo" class="logo" />
     <h2 class="title">Register</h2>
-    <!-- form  start -->
+ 
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
 
-      <!-- user -->
+     
       <input
         type="text"
         class="ud"
@@ -24,7 +18,7 @@
      </div>
 
 
-      <!-- email -->
+
       <input
         type="email"
         class="ud"
@@ -36,7 +30,7 @@
       </div>
 
 
-      <!-- password -->
+     
       <input
         type="password"
         class="ud"
@@ -46,7 +40,7 @@
       <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched">
         <small class="error">Password is required.</small>
       </div>
-      <!-- confirm password -->
+     
       <input
         type="password"
         class="ud"
@@ -64,5 +58,4 @@
       <a routerLink="/login" class="cls-3">Login</a>
     </p>
   </div>
-</body>
-</html>
+</div>
