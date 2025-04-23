@@ -7,12 +7,28 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
   styleUrls: ['./attendance.component.css'],
 })
 export class AttendanceComponent implements OnInit {
-  studentEntireList: any[] = []; 
+  studentEntireList: any[] = [];
+  presentCount: number = 0;
+  absentCount: number = 0;
 
   constructor(private authenticationService: AuthenticationService) {}
 
   ngOnInit(): void {
     this.studentEntireList = this.authenticationService.getStudents();
+  }
+
+  present(student: any): void {
+    if (!student.attendance) {
+      student.attendance = 'present';
+      this.presentCount++;
+    }
+  }
+
+  absent(student: any): void {
+    if (!student.attendance) {
+      student.attendance = 'absent';
+      this.absentCount++;
+    }
   }
 }
 
