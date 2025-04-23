@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { TotalStudentComponent } from './dashboard/total-student/total-student.component';
-import { AttendancePercentComponent } from './dashboard/attendance-percent/attendance-percent.component';
-import { OverallScoreComponent } from './dashboard/overall-score/overall-score.component';
+import{ HomepageComponent } from './homepage/homepage.component';
+import { DashboardComponent } from './home/dashboard/dashboard.component';
+import { StudentListComponent } from './home/student-list/student-list.component';
+import { AttendanceComponent } from './home/attendance/attendance.component';
+import { MarksComponent } from './home/marks/marks.component';
+
 
 
 
@@ -17,17 +19,18 @@ import { OverallScoreComponent } from './dashboard/overall-score/overall-score.c
     AppComponent,
     RegisterComponent,
     LoginComponent,
+    HomepageComponent,
     DashboardComponent,
-    TotalStudentComponent,
-    AttendancePercentComponent,
-    OverallScoreComponent,
-   
+    StudentListComponent,
+    AttendanceComponent,
+    MarksComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule 
+    AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -23,7 +23,7 @@ export class LoginComponent {
     const isValidUser = this.authService.loginUser(this.email, this.password);
     if (isValidUser) {
       alert('Login successful!');
-      this.router.navigate(['\dashboard']); 
+      this.router.navigate(['\homepage']); 
     } else {
       alert('Invalid email or password');
     }

@@ -1,0 +1,26 @@
+<div class="navbar-container">
+    <nav>
+        <a routerLink="./dashboard">
+            <img src="assets/dashboard.png" style="height: 20px; width: 20px; margin-right: 8px;" />
+            Dashboard
+        </a>
+        <a routerLink="./student-list">
+            <img src="assets/student-list.png" style="height: 20px; width: 20px; margin-right: 8px;"  />
+            Student List
+        </a>
+        <a routerLink="./attendance">
+            <img src="assets/attendance.png" style="height: 20px; width: 20px; margin-right: 8px;"  />
+            Attendance
+        </a>
+        <a routerLink="./marks">
+            <img src="assets/marks.png" style="height: 20px; width: 20px; margin-right: 8px;"  />
+            Marks
+        </a>
+       <button (click)="logout()" class="btn">
+          logout
+        </button>
+    </nav>
+</div>
+<div class="below-navbar">
+    <router-outlet></router-outlet>
+</div>

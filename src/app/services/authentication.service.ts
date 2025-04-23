@@ -11,7 +11,7 @@ export class AuthenticationService {
 
     for (let i = 0; i < users.length; i++) {
       if (users[i].email === user.email) {
-        return false;
+        return false; 
       }
     }
 
@@ -33,5 +33,16 @@ export class AuthenticationService {
     }
 
     return false;
+  }
+
+  
+  private studentData: any[] = [];
+
+  getStudents() {
+    return this.studentData;
+  }
+
+  addStudent(student: any) {
+    this.studentData.push(student);
   }
 }

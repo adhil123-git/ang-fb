@@ -11,11 +11,7 @@ import { AuthenticationService } from '../services/authentication.service';
 export class RegisterComponent {
   registerForm: FormGroup;
 
-  constructor(
-    private formBuilder: FormBuilder,
-    private authenticationService: AuthenticationService,
-    private router: Router
-  ) {
+  constructor( private formBuilder: FormBuilder, private authenticationService: AuthenticationService,private router: Router) {
     this.registerForm = this.formBuilder.group({
       username: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],

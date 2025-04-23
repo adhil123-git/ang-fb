@@ -1,0 +1,22 @@
+<div>
+    <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+        <label for="studentName">Name:</label>
+        <input type="text" id="studentName" formControlName="studentName" required>
+        
+        <label for="registerNumber">Register Number:</label>
+        <input type="text" id="registerNumber" formControlName="registerNumber" required>
+      
+        <button type="submit">Add Student</button>
+    </form>
+</div>
+
+<div>
+    <h1>Student List</h1>
+    <p>Total no of students {{studentData.length}}</p>
+    <ol>
+        <li *ngFor="let student of studentData">
+            Name: {{ student.studentName }} , Register Number: {{ student.registerNumber }}
+        </li>
+    </ol>
+</div>
+
