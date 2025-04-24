@@ -14,6 +14,7 @@ import { MarksComponent } from './home/marks/marks.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { MarksComponent } from './home/marks/marks.component';
     DashboardComponent,
     StudentListComponent,
     AttendanceComponent,
-    MarksComponent
+    MarksComponent,
+    
   ],
   imports: [
     BrowserModule,

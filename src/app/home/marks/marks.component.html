@@ -1,13 +1,37 @@
-<div>
-    <h1>Mark List</h1>
-    <h2>Student Name List</h2>
-    <ol>
-        <li *ngFor="let student of studentEntireList">
-            Name: {{ student.studentName }}, Register Number: {{ student.registerNumber }}
-            <input type="number" [(ngModel)]="student.marks" placeholder="Enter the marks" />
-        </li>
-    </ol>
-</div>
-<div>
-    <h1>average mark:</h1>
+<div class="wh-container">
+    <div class="cls-1">
+        <h1>Mark List</h1>
+        <h2>Student Name List</h2>
+        <div class="table-div">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Register Number</th>
+                        <th>English Marks</th>
+                        <th>Tamil Marks</th>
+                        <th>Maths Marks</th>
+                        <th>Total Marks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let student of studentEntireList">
+                        <td>{{ student.studentName }}</td>
+                        <td>{{ student.registerNumber }}</td>
+                        <td>
+                            <input type="number" [(ngModel)]="student.engMarks" (input)="Total(student)" placeholder="Enter English marks" />
+                        </td>
+                        <td>
+                            <input type="number" [(ngModel)]="student.tamilMarks" (input)="Total(student)" placeholder="Enter Tamil marks" />
+                        </td>
+                        <td>
+                            <input type="number" [(ngModel)]="student.mathsMarks" (input)="Total(student)" placeholder="Enter Maths marks" />
+                        </td>
+                        <td>{{ student.totalMarks }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
 </div>

@@ -1,0 +1,38 @@
+h1, h2 {
+    margin: 10px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 14px;
+    text-align: left;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+.table-div{
+    width: fit-content;
+    height: 200px;
+    overflow: scroll;
+}
+.wh-container{
+    margin-left:300px;;
+}

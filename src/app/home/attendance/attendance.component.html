@@ -1,16 +1,34 @@
-<div>
-  <h1>Attendance</h1>
-  <h2>Student List</h2>
-  <ol>
-    <li *ngFor="let student of studentEntireList">
-      Name: {{ student.studentName }}, Register Number: {{ student.registerNumber }}
-      <button (click)="present(student)" [disabled]="student.attendance">present</button>
-      <button (click)="absent(student)" [disabled]="student.attendance">absent</button>
-    </li>
-  </ol>
-</div>
-<div>
-  <h1>Attendance Details</h1>
-  <p>Total no of students present: {{ presentCount }}</p>
-  <p>Total no of students absent: {{ absentCount }}</p>
+<div class="wh-container">
+  <div>
+    <h1>Attendance</h1>
+    <h2>Student List</h2>
+    <div class="table-div">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Register Number</th>
+            <th>Attendance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of studentEntireList">
+            <td>{{ student.studentName }}</td>
+            <td>{{ student.registerNumber }}</td>
+            <td>
+              <button (click)="present(student)" [disabled]="student.attendance">Present</button>
+              <button (click)="absent(student)" [disabled]="student.attendance">Absent</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div>
+    <h1>Attendance Details</h1>
+    <p>Total no of students present: {{ presentCount }}</p>
+    <p>Total no of students absent: {{ absentCount }}</p>
+  </div>
+  
+
 </div>

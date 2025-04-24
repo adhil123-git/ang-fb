@@ -15,12 +15,15 @@ export class AttendanceComponent implements OnInit {
 
   ngOnInit(): void {
     this.studentEntireList = this.authenticationService.getStudents();
+    this.presentCount = this.authenticationService.getpresentCount();
+    this.absentCount = this.authenticationService.getAbsentCount();
   }
 
   present(student: any): void {
     if (!student.attendance) {
       student.attendance = 'present';
       this.presentCount++;
+      this.authenticationService.setpresentCount(this.presentCount);
     }
   }
 
@@ -28,6 +31,7 @@ export class AttendanceComponent implements OnInit {
     if (!student.attendance) {
       student.attendance = 'absent';
       this.absentCount++;
+      this.authenticationService.setAbsentCount(this.absentCount);
     }
   }
 }

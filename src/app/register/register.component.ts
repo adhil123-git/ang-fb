@@ -22,10 +22,16 @@ export class RegisterComponent {
 
   onSubmit(): void {
     if (this.registerForm.value.password !== this.registerForm.value.confirmPassword) {
-      alert('Passwords do not match!');
-      return;
+      if (this.registerForm.invalid) {
+        alert('Please fill out all fields correctly!');
+        return;
+      }
+    
+      if (this.registerForm.value.password !== this.registerForm.value.confirmPassword) {
+        alert('Passwords do not match!');
+        return;
+      }
     }
-    alert('fill out all fields');
 
     const { username, email, password } = this.registerForm.value;
 

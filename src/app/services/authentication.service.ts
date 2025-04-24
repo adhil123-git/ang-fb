@@ -45,4 +45,21 @@ export class AuthenticationService {
   addStudent(student: any) {
     this.studentData.push(student);
   }
+
+private presentCount: number = 0;
+  private absentCount: number = 0;
+  getpresentCount() {
+    return this.presentCount;
+  }
+  getAbsentCount() {
+    return this.absentCount;
+  }
+  setpresentCount(totalcount: number) {
+    this.presentCount = totalcount;
+  }
+  setAbsentCount(totalcount: number) {
+     this.absentCount = totalcount;
+  }
+
+
 }
