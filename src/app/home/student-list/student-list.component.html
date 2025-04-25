@@ -3,18 +3,23 @@
         <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
             <label for="studentName">Name:</label>
             <input type="text" id="studentName" formControlName="studentName" required>
-            
+
             <label for="registerNumber">Register Number:</label>
             <input type="number" id="registerNumber" formControlName="registerNumber" required>
-          
-            <button class="btn"  type="submit">Add Student</button>
+
+            <button class="btn" [disabled]="studentForm.invalid" type="submit">Add Student</button>
         </form>
     </div>
-    
+
+
+
+
+
     <div class="cls-2">
         <h1>Student List</h1>
-        <p>Total no of students - {{studentData.length}}</p>
-        <app-student-count [totalStudents]="studentData.length"  (notify)="onNotify($event)"></app-student-count>
+        <div class="total">
+            <app-student-count [total]="studentData.length" (notify)="notify($event)"></app-student-count>
+        </div>
         <div class="table-div">
             <table class="table">
                 <thead>
@@ -25,7 +30,7 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let student of studentData">
-                        <td>{{ student.studentName }}</td>
+                        <td>{{ student.studentName | titlecase}}</td>
                         <td>{{ student.registerNumber }}</td>
                     </tr>
                 </tbody>
@@ -33,5 +38,3 @@
         </div>
     </div>
 </div>
-
-

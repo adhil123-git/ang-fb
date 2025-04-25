@@ -13,7 +13,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let student of studentEntireList">
-            <td>{{ student.studentName }}</td>
+            <td>{{ student.studentName | titlecase }}</td>
             <td>{{ student.registerNumber }}</td>
             <td>
               <button (click)="present(student)" [disabled]="student.attendance">Present</button>

@@ -70,3 +70,10 @@ input{
    
     margin-left: 300px;
 }
+.total{
+    display:flex;
+    background-color: #d4d8d5;
+    width:fit-content;
+    border-radius: 7px;
+    padding: 10px;
+}

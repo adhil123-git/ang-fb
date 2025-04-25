@@ -7,16 +7,18 @@
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Register Number</th>
-                        <th>English Marks</th>
+                        <th>Reg no</th>
+                        <th>Eng Marks</th>
                         <th>Tamil Marks</th>
                         <th>Maths Marks</th>
+                        <th>Add marks</th>
                         <th>Total Marks</th>
+            
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let student of studentEntireList">
-                        <td>{{ student.studentName }}</td>
+                        <td>{{ student.studentName | titlecase }}</td>
                         <td>{{ student.registerNumber }}</td>
                         <td>
                             <input type="number" [(ngModel)]="student.engMarks" (input)="Total(student)" placeholder="Enter English marks" />
@@ -27,7 +29,10 @@
                         <td>
                             <input type="number" [(ngModel)]="student.mathsMarks" (input)="Total(student)" placeholder="Enter Maths marks" />
                         </td>
+                        <td> <button (click)="add">Add</button></td>
+
                         <td>{{ student.totalMarks }}</td>
+                        
                     </tr>
                 </tbody>
             </table>

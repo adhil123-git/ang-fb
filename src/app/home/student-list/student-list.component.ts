@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 
+
 import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
@@ -31,7 +32,7 @@ export class StudentListComponent {
   }
 
 
-  onNotify(message: string): void {
+  notify(message: string): void {
     alert(message); 
   }
 }

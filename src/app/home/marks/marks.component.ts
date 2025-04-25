@@ -25,8 +25,11 @@ export class MarksComponent implements OnInit {
       });
     }
   }
+  add(){
+  
+  }
 
-  Total(stud: any): void {
-    stud.totalMarks = (stud.engMarks) + (stud.tamilMarks) + (stud.mathsMarks);
+  Total(student: any): void {
+    student.totalMarks = (student.engMarks) + (student.tamilMarks) + (student.mathsMarks);
   }
 }

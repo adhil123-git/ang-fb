@@ -1,10 +1,9 @@
 .navbar-container{
-    display:flex;
-    justify-content:center;
+    display:inline-flex;
+    justify-content:space-evenly;
     align-items: center;
 
   
-
     background-color:#0b84f5;
     height:50px;
     width: 99%;
@@ -63,3 +62,4 @@ a{
     width:99%;
     box-shadow: 10px 10px 5px #525353;
 }
+

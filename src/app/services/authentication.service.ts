@@ -54,11 +54,11 @@ private presentCount: number = 0;
   getAbsentCount() {
     return this.absentCount;
   }
-  setpresentCount(totalcount: number) {
-    this.presentCount = totalcount;
+  setpresentCount(pc: number) {
+    this.presentCount = pc;
   }
-  setAbsentCount(totalcount: number) {
-     this.absentCount = totalcount;
+  setAbsentCount(ac: number) {
+     this.absentCount = ac;
   }
 
 
