@@ -10,6 +10,7 @@ import { DashboardComponent } from './home/dashboard/dashboard.component';
 import { StudentListComponent } from './home/student-list/student-list.component';
 import { AttendanceComponent } from './home/attendance/attendance.component';
 import { MarksComponent } from './home/marks/marks.component';
+import { StudentCountComponent } from './home/student-count/student-count.component';
 
 
 
@@ -25,6 +26,7 @@ import { MarksComponent } from './home/marks/marks.component';
     StudentListComponent,
     AttendanceComponent,
     MarksComponent,
+    StudentCountComponent,
     
   ],
   imports: [

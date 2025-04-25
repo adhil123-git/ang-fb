@@ -29,4 +29,9 @@ export class StudentListComponent {
     this.studentData = this.authenticationService.getStudents();
     this.studentForm.reset();
   }
+
+
+  onNotify(message: string): void {
+    alert(message); 
+  }
 }

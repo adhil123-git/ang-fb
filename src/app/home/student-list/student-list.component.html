@@ -14,6 +14,7 @@
     <div class="cls-2">
         <h1>Student List</h1>
         <p>Total no of students - {{studentData.length}}</p>
+        <app-student-count [totalStudents]="studentData.length"  (notify)="onNotify($event)"></app-student-count>
         <div class="table-div">
             <table class="table">
                 <thead>
