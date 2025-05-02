@@ -11,6 +11,7 @@ import { StudentListComponent } from './home/student-list/student-list.component
 import { AttendanceComponent } from './home/attendance/attendance.component';
 import { MarksComponent } from './home/marks/marks.component';
 import { StudentCountComponent } from './home/student-count/student-count.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -34,6 +35,8 @@ import { StudentCountComponent } from './home/student-count/student-count.compon
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    HttpClientModule
+
 
   ],
   providers: [],

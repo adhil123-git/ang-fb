@@ -67,7 +67,7 @@ input{
 
 
 .wh-container{
-   
+   margin-top: 10px;
     margin-left: 300px;
 }
 .total{
@@ -75,5 +75,5 @@ input{
     background-color: #d4d8d5;
     width:fit-content;
     border-radius: 7px;
-    padding: 10px;
+    padding: 5px;
 }

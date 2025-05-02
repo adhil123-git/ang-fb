@@ -11,7 +11,6 @@
                         <th>Eng Marks</th>
                         <th>Tamil Marks</th>
                         <th>Maths Marks</th>
-                        <th>Add marks</th>
                         <th>Total Marks</th>
             
                     </tr>
@@ -29,7 +28,7 @@
                         <td>
                             <input type="number" [(ngModel)]="student.mathsMarks" (input)="Total(student)" placeholder="Enter Maths marks" />
                         </td>
-                        <td> <button (click)="add">Add</button></td>
+                 
 
                         <td>{{ student.totalMarks }}</td>
                         

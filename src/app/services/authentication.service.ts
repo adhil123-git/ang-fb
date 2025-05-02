@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
@@ -35,7 +38,7 @@ export class AuthenticationService {
     return false;
   }
 
-  
+
   private studentData: any[] = [];
 
   getStudents() {
@@ -60,6 +63,19 @@ private presentCount: number = 0;
   setAbsentCount(ac: number) {
      this.absentCount = ac;
   }
+
+  private apiUrl = 'https://jsonplaceholder.typicode.com/users';
+
+  constructor(private http: HttpClient) {}
+
+  getdummydata(): Observable<any> {
+    return this.http.get(this.apiUrl);
+  }
+
+
+
+
+
 
 
 }

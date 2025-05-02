@@ -9,6 +9,7 @@
 
             <button class="btn" [disabled]="studentForm.invalid" type="submit">Add Student</button>
         </form>
+        <button  class="btn"  [disabled]="studentForm.valid"  (click)="showdata()" style="margin-top: 5px;">subscribe</button>
     </div>
 
 
@@ -16,7 +17,7 @@
 
 
     <div class="cls-2">
-        <h1>Student List</h1>
+        <p>Student List</p>
         <div class="total">
             <app-student-count [total]="studentData.length" (notify)="notify($event)"></app-student-count>
         </div>
@@ -33,8 +34,15 @@
                         <td>{{ student.studentName | titlecase}}</td>
                         <td>{{ student.registerNumber }}</td>
                     </tr>
+                    <tr *ngFor="let student of  dummydata">
+                   <td>{{ student.name }}</td>
+                   <td>{{ student.id}}</td>
+                    </tr> 
                 </tbody>
             </table>
         </div>
     </div>
+    
+
+
 </div>

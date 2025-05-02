@@ -12,6 +12,7 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 export class StudentListComponent {
   studentForm: FormGroup;
   studentData: any[] = [];
+  dummydata:any[]=[];
 
   constructor(private formBuilder: FormBuilder, private authenticationService: AuthenticationService) {
     this.studentForm = this.formBuilder.group({
@@ -35,4 +36,17 @@ export class StudentListComponent {
   notify(message: string): void {
     alert(message); 
   }
+
+  
+
+
+  
+
+  showdata() {
+    this.authenticationService.getdummydata().subscribe((data: any[]) => {
+      this.dummydata = data;
+    });
+  }
+
 }
+  
