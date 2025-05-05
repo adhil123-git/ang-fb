@@ -1,4 +1,4 @@
-import { Component, OnInit,} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
@@ -18,18 +18,18 @@ export class MarksComponent implements OnInit {
       this.studentEntireList.push({
         studentName: student.studentName,
         registerNumber: student.registerNumber,
-        engMarks: '',
-        tamilMarks: '',
-        mathsMarks: '',
-        totalMarks: ''
+        engMarks:"" ,
+        tamilMarks:"" ,
+        mathsMarks: "",
+        totalMarks: ""
       });
     }
   }
 
-  
-  
-
-  Total(student: any): void {
-    student.totalMarks = (student.engMarks) + (student.tamilMarks) + (student.mathsMarks);
+  calculateTotal(student: any): void {
+    student.totalMarks = 
+      (Number(student.engMarks)) + 
+      (Number(student.tamilMarks) ) + 
+      (Number(student.mathsMarks) );
   }
 }

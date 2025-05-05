@@ -64,12 +64,12 @@ private presentCount: number = 0;
      this.absentCount = ac;
   }
 
-  private apiUrl = 'https://jsonplaceholder.typicode.com/users';
+  private Url = 'https://jsonplaceholder.typicode.com/users';
 
   constructor(private http: HttpClient) {}
 
   getdummydata(): Observable<any> {
-    return this.http.get(this.apiUrl);
+    return this.http.get(this.Url);
   }
 
 

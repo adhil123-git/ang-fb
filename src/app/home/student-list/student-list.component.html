@@ -9,19 +9,17 @@
 
             <button class="btn" [disabled]="studentForm.invalid" type="submit">Add Student</button>
         </form>
-        <button  class="btn"  [disabled]="studentForm.valid"  (click)="showdata()" style="margin-top: 5px;">subscribe</button>
+        <button class="btn" [disabled]="studentForm.valid" (click)="showdata()" style="margin-top: 5px;">Subscribe</button>
     </div>
 
-
-
-
-
-    <div class="cls-2">
-        <p>Student List</p>
-        <div class="total">
-            <app-student-count [total]="studentData.length" (notify)="notify($event)"></app-student-count>
-        </div>
-        <div class="table-div">
+    <div class="whole-table">
+        
+           
+            <div class="child-component">
+                
+                <app-student-count [total]="studentData.length" (notify)="notify($event)"></app-student-count>
+            </div>
+            <div class="inside-table">
             <table class="table">
                 <thead>
                     <tr>
@@ -31,18 +29,29 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let student of studentData">
-                        <td>{{ student.studentName | titlecase}}</td>
+                        <td>{{ student.studentName | titlecase }}</td>
                         <td>{{ student.registerNumber }}</td>
                     </tr>
-                    <tr *ngFor="let student of  dummydata">
-                   <td>{{ student.name }}</td>
-                   <td>{{ student.id}}</td>
-                    </tr> 
+                </tbody>
+            </table>
+        </div>
+
+        <div class="inside-table-2">
+          
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let student of dummydata">
+                        <td>{{ student.name }}</td>
+                        <td>{{ student.id }}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
     </div>
-    
-
-
 </div>
