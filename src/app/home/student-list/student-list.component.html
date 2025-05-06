@@ -18,6 +18,7 @@
             <div class="child-component">
                 
                 <app-student-count [total]="studentData.length" (notify)="notify($event)"></app-student-count>
+                
             </div>
             <div class="inside-table">
             <table class="table">
@@ -29,7 +30,7 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let student of studentData">
-                        <td>{{ student.studentName | titlecase }}</td>
+                        <td>{{ student.studentName |titlecase}}</td>
                         <td>{{ student.registerNumber }}</td>
                     </tr>
                 </tbody>

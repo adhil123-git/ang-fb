@@ -28,8 +28,8 @@ export class MarksComponent implements OnInit {
 
   calculateTotal(student: any): void {
     student.totalMarks = 
-      (Number(student.engMarks)) + 
-      (Number(student.tamilMarks) ) + 
-      (Number(student.mathsMarks) );
+      (student.engMarks)+ 
+      (student.tamilMarks)  + 
+      (student.mathsMarks) ;
   }
 }
