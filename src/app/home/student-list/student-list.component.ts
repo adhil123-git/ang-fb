@@ -16,8 +16,8 @@ export class StudentListComponent {
 
   constructor(private formBuilder: FormBuilder, private authenticationService: AuthenticationService) {
     this.studentForm = this.formBuilder.group({
-      studentName: new FormControl(''),
-      registerNumber: new FormControl('')
+      studentName: [],
+      registerNumber: []
     });
   
   

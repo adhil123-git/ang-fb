@@ -9,12 +9,12 @@ import { MarksComponent } from './home/marks/marks.component';
 import { AttendanceComponent } from './home/attendance/attendance.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', component:LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   {path:'homepage', component: HomepageComponent,
     children:[
-      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: '', component:DashboardComponent },
       { path: 'dashboard', component: DashboardComponent },
       { path: 'student-list', component: StudentListComponent },
       { path: 'marks', component: MarksComponent },
